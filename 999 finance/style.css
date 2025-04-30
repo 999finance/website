@@ -1,0 +1,281 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: #ffffff;
+    color: #282828;
+    direction: rtl;
+    line-height: 1.7;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Container */
+  .container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  
+  /* Preloader */
+  #preloader {
+    background: #ffffff;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader {
+    border: 4px solid #ffffff;
+    border-top: 4px solid #3b876a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Header */
+  .site-header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  nav a {
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #3b876a;
+  }
+  
+  .hero-slider-section {
+    position: relative;
+    overflow: hidden;
+    height: 500px; 
+    background: #ffffff;
+  }
+  
+  .hero-slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(to left, #3b876a, #3b876a);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero p {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .hero .btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #3b876a;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background: #ffffff;
+  }
+  
+  /* Section Titles */
+  section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #3b876a;
+  }
+  
+  /* Grid Layouts */
+  .services-grid,
+  .portfolio-grid,
+  .certificates-grid,
+  .contact-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Card */
+  .card, .certificate-item, .icon-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card:hover,
+  .icon-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img, .certificate-item img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #3b876a;
+  }
+  
+  /* Certificates */
+  .certificates {
+    background: #ffffff;
+  }
+  
+  .certificate-item p {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  /* Contact Icons */
+  .contact-icons-grid img {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .icon-item p {
+    font-weight: bold;
+    color: #3b876a;
+  }
+  
+  /* Footer */
+  footer {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px; 
+    flex-wrap: nowrap; 
+  }
+  
+  
+  .social-icons a img {
+    width: 28px;
+    margin: 0 8px;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover img {
+    opacity: 1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .header-flex {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
